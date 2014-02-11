@@ -34,8 +34,22 @@ var listener = new TouchListener(this.el, function (event, touch) {
 
     // for example prevent sideways native scrolling, but allow native up and down scrolling
     if (touch.firstAxis === 'x' && !model.sorting) {
+        // on hold `e` won't exist
         if (e) e.preventDefault();
 
+        return;
+    }
+
+    // something else
+    if (touch.x > 75) {
+        // do something
+        return;
+    }
+
+    // some other condition
+    if (touch.done) {
+        // touch event is over
+        myapp.kaboom();
         return;
     }
 });
