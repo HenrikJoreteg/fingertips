@@ -1,0 +1,26 @@
+{
+  "name": "fingertips",
+  "description": "A highly configurable touch event library",
+  "version": "0.0.0",
+  "author": "Henrik Joreteg <henrik@andyet.net>",
+  "bugs": {
+    "url": "https://github.com/henrikjoreteg/fingertips/issues"
+  },
+  "dependencies": {
+    "human-model": "~2.6.0"
+  },
+  "homepage": "https://github.com/henrikjoreteg/fingertips",
+  "keywords": [
+    "touch",
+    "events"
+  ],
+  "license": "MIT",
+  "main": "touch-controller.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/henrikjoreteg/fingertips"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
