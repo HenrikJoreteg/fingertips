@@ -7,7 +7,7 @@
     "url": "https://github.com/henrikjoreteg/fingertips/issues"
   },
   "dependencies": {
-    "human-model": "~2.6.0"
+    "statey": "0.0.2"
   },
   "homepage": "https://github.com/henrikjoreteg/fingertips",
   "keywords": [

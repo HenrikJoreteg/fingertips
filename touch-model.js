@@ -1,8 +1,8 @@
-var HumanModel = require('human-model');
+var Statey = require('statey');
 var _ = require('underscore');
 
 
-module.exports = HumanModel.define({
+module.exports = Statey.extend({
     initialize: function () {
         var self = this;
         this.on('change:tossed', function (model, val) {

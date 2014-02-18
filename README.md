@@ -14,7 +14,7 @@ But, ultimately it didn't fit my needs because I wanted something that would let
 
 I also wanted to be able to handle multiple individual touches individually if I so chose.
 
-So I started modeling touches with... Model code. Specifically [human-model](https://github.com/henrikjoreteg/human-model) as it turns out intelligently evented derived properties are very useful for efficiently modeling user behavior.
+So I started modeling touches with... Model code. Specifically [statey](https://github.com/henrikjoreteg/statey) as it turns out intelligently evented derived properties are very useful for efficiently modeling user behavior.
 
 Unfortunately, in order to give this level of control I've ended up with an API that's a bit trickier to wrap your mind around.
 
@@ -68,6 +68,7 @@ npm i fingertips
 
 ## Changelog
 
+- 0.0.1 [diff](https://github.com/HenrikJoreteg/fingertips/compare/v0.0.0...v0.0.1) Switching to statey instead of human-model
 - 0.0.0 initial publish
 
 ## Credits

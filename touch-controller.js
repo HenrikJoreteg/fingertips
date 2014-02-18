@@ -1,5 +1,5 @@
-var TouchModel = require('./touchModel');
-var TouchesCollection = require('./touches');
+var TouchModel = require('./touch-model');
+var TouchesCollection = require('./touch-collection');
 var _ = require('underscore');
 
 
