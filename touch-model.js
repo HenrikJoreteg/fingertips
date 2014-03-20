@@ -1,8 +1,8 @@
-var Statey = require('statey');
+var State = require('ampersand-state');
 var _ = require('underscore');
 
 
-module.exports = Statey.extend({
+module.exports = State.extend({
     initialize: function () {
         var self = this;
         this.on('change:tossed', function (model, val) {

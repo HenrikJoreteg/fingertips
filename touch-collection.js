@@ -1,8 +1,8 @@
-var Backbone = require('backbone');
+var Collection = require('ampersand-collection');
 var TouchModel = require('./touch-model');
 
 
-module.exports = Backbone.Collection.extend({
+module.exports = Collection.extend({
     model: TouchModel,
     getOrCreate: function (id) {
         var model = this.get(id);

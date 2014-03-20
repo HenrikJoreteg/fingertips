@@ -7,7 +7,8 @@
     "url": "https://github.com/henrikjoreteg/fingertips/issues"
   },
   "dependencies": {
-    "statey": "0.0.2"
+    "ampersand-collection": "0.x.x",
+    "ampersand-state": "0.x.x"
   },
   "homepage": "https://github.com/henrikjoreteg/fingertips",
   "keywords": [
