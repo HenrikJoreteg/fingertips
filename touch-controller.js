@@ -1,15 +1,11 @@
-var TouchModel = require('./touch-model');
 var TouchesCollection = require('./touch-collection');
 var _ = require('underscore');
 
 
 function TouchListener(el, customHandler) {
-    var self = this;
     this.touchCollection = new TouchesCollection();
     this.el = el || document;
     this.customHandler = customHandler;
-
-    var myTouches = this.touchCollection;
 
     _.bindAll(this, 'handleTouchStart', 'handleTouchMove', 'handleTouchCancel', 'handleTouchEnd');
 

@@ -1,16 +1,10 @@
 var State = require('ampersand-state');
 var _ = require('underscore');
+var console = window.console;
 
 
 module.exports = State.extend({
-    initialize: function () {
-        var self = this;
-        this.on('change:tossed', function (model, val) {
-            if (val) console.log('tossed it', self.lastDirection);
-        });
-    },
     log: function () {
-        return;
         var id = Number((this.id + '').slice(-2));
         var args = _.toArray(arguments);
         args.unshift(id);
@@ -42,8 +36,11 @@ module.exports = State.extend({
         } else if (e.type === 'touchend') {
             changes = {
                 endTime: e.timeStamp,
-                phase: 'end'
+                phase: 'end',
+                tossed: self.speed > 1,
+                lastDirection: this.getPrimaryDirection(this.x - this.previous('x'), this.y - this.previous('y'))
             };
+
         }
 
         if (touch.pageY !== 0 && touch.pageX !== 0) {
@@ -96,9 +93,13 @@ module.exports = State.extend({
         firstDirection: {
             values: ['up', 'down', 'left', 'right']
         },
+        lastDirection: {
+            values: ['up', 'down', 'left', 'right']
+        },
         timeStamp: 'number',
         payload: 'object',
-        target: 'object'
+        target: 'object',
+        tossed: ['boolean', true, false]
     },
     derived: {
         speed: {
@@ -125,18 +126,6 @@ module.exports = State.extend({
                 var tDelta = (this.timeStamp - this.previous('timeStamp')) || 0;
                 var xDelta = (this.x - this.previous('x')) || 0;
                 return xDelta / tDelta;
-            }
-        },
-        tossed: {
-            deps: ['phase'],
-            fn: function () {
-                return this.phase === 'end' && this.speed > 1;
-            }
-        },
-        lastDirection: {
-            deps: ['x', 'y', 'timeStamp'],
-            fn: function () {
-                return this.getPrimaryDirection(this.x - this.previous('x'), this.y - this.previous('y'));
             }
         },
         firstAxis: {

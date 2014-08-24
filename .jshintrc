@@ -1,0 +1,14 @@
+{
+  "node": false,
+  "curly": false,
+  "latedef": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+  "browser": true,
+  "predef": [
+    "require",
+    "module"
+  ]
+}
